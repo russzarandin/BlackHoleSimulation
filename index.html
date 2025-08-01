@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Black Hole Spaghettification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./node_modules/three/build/three.module.js",
+          "three/addons/": "./node_modules/three/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+
+<body>
+    <div id="ui-container" class="shadow-lg">
+        <div class="control-group">
+            <label for="rayLength" class="text-sm font-bold">Ray Length:</label>
+            <input type="range" id="rayLength" min="10" max="150" value="20">
+            <span id="rayLengthValue" class="text-xs text-gray-400">20</span>
+        </div>
+
+        <div class="control-group">
+            <label for="pullStrength" class="text-sm font-bold">Gravitational Pull:</label>
+            <input type="range" id="pullStrength" min="1" max="20" step="1" value="10">
+            <span id="pullStrengthValue" class="text-xs text-gray-400">1.0</span>
+        </div>
+
+        <div class="color-pickers">
+            <div class="control-group">
+                <label for="headColor" class="text-sm font-bold">Head Color:</label>
+                <input type="color" id="headColor" value="#ffffff" class="w-16 h-8 rounded-md border-none cursor-pointer">
+            </div>
+            <div class="control-group">
+                <label for="tailColor" class="text-sm font-bold">Tail Color:</label>
+                <input type="color" id="tailColor" value="#ffffff" class="w-16 h-8 rounded-md border-none cursor-pointer">
+            </div>
+        </div>
+        <p class="text-xs text-gray-300 mt-2">Drag mouse to orbit, scroll to zoom.</p>
+    </div>
+
+    <div id="message-box">
+        <p id="message-text"></p>
+        <button onclick="hideMessage()">OK</button>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
