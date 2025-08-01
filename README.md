@@ -33,11 +33,23 @@ Then visit the local URL shown in the terminal (usually [http://127.0.0.1:8080](
 ### 3. Project Structure
 
 ```
-src/sceneSetup.js
-src/controls.js
-src/rays.js
-src/animate.js
-src/index.html
+3DBlackHoleSimulation/
+┣ assets/
+┃ ┗ image.png
+┣ node_modules/
+┣ src/
+┃ ┣ animate.js
+┃ ┣ controls.js
+┃ ┣ main.js
+┃ ┣ rays.js
+┃ ┣ sceneSetup.js
+┃ ┗ utils.js
+┣ .gitignore
+┣ index.html
+┣ package-lock.json
+┣ package.json
+┣ README.md
+┗ style.css
 ```
 
 * All simulation logic is split across modular files
