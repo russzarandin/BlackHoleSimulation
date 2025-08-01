@@ -4,7 +4,8 @@ This project simulates light rays spiraling around a black hole using [Three.js]
 
 ## 💽 Demo
 
-assets/image.png
+<img width="2560" height="1251" alt="image" src="https://github.com/user-attachments/assets/ddcca326-b529-46b1-80c7-b0f2024c0d13" />
+
 
 ## 🚀 How to Run
 
